@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<head>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+		<meta http-equiv="content-language" content="en">
+		<meta name="language" content="english">
+		<meta name="description" content="jQuery Easy Slides is an easy to use and light weight slideshow plugin for jQuery.">
+		<meta name="keywords" content="jQuery, slideshow, slide show, Javascript, easy slides, slideshow plugin">
+		<meta name="author" content="Dale Davies">
+        <!-- Include Main jQuery library -->
+        <script type="text/Javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+		<script type="text/Javascript" src="slideshow1/js/jquery.easyslides.min.v1.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="slideshow1/css/easySlides.default.min.css" />
+
+<style>
+body{
+background-color:green;
+}
+
+#wrapper {
+width:800px;
+height:100%; 
+margin:0 auto;
+background-image: linear-gradient(bottom, rgb(255,255,255) 80%, rgb(255,255,255) 69%);
+background-image: -o-linear-gradient(bottom, rgb(255,255,255) 80%, rgb(255,255,255) 69%);
+background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 80%, rgb(255,255,255) 69%);
+background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 80%, rgb(255,255,255) 69%);
+background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 80%, rgb(255,255,255) 69%);
+}
+
+#slideshow_container {
+    width: 800px;
+    height: 300px;
+}
+</style>		
+		
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="slideshow_container">
+		<div id="example_1_container" class="easy_slides_container"></div>
+	</div>
+</div>
+	
+	
+<script>
+
+// Set up our options for the slideshow...
+var myOptions = {
+    noImages: 5, // Number of images
+    path: "images/", // Relative path with trailing slash.
+    captions: { // HTML can be included in the captions.
+        1: '',
+        2: '',
+        3: '',
+        4: '',
+		5: ''
+    },
+    links: { // Should the images link anywhere? if no links are required at all then this option can be omitted.
+        1:"",
+        2:"",
+        3:"",
+        4:"",
+		4:""
+    },
+    linksOpen:'newWindow', // How to open links? sameWindow or newWindow.
+    timerInterval: 10000, // 10000 = 10 seconds
+    randomise: false // Start with random image? true=yes/false=no
+};
+
+// Initiate the Easy Slides plugin, assigning it to your contaner DIV...
+$('#slideshow_container').easySlides(myOptions);
+
+</script>
+
+</body>
+</html>
